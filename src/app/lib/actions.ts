@@ -33,6 +33,9 @@ export async function logIn(formData:LoginFormDataObject){
                 case 'CredentialsSignin':
 
                   return 'Invalid credentials.';
+                case 'OAuthCallbackError':
+
+                  return 'Something went wrong.';
                 default:
                   return 'Something went wrong.';
               }

@@ -44,6 +44,10 @@ export default function LoginForm() {
                         newerror="Invalid credentials"
                     setErrorMessage(newerror);
                     
+                } else if(resultOfSignIn==="OAuthCallbackError"){
+                    setIthasError(true);
+                    newerror="Something went wrong, Try again."
+                setErrorMessage(newerror);
                 }
     }
       

@@ -113,7 +113,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
         if ((pathname.startsWith('/auth/signin')||pathname.startsWith('/auth/signup')) && isLoggedIn) {
           console.log("We are logged in and on sign in page, so it moves to dashboard")
-          return Response.redirect(new URL('/dashboard', nextUrl));
+          return Response.redirect(new URL('/', nextUrl));
         } 
         return !!auth;                          
     },

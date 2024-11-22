@@ -167,12 +167,17 @@ function ProfileUI({userdetails}:{userdetails:FetchingUserDetailsObject}){
         </button>
         </Link>
       </div>
-      <div className="flex flex-col gap-3 p-4">
+      <div className="flex flex-col gap-3 p-4 ">
         <div className="flex gap-6 justify-between">
           <p className="text-[#111517] text-base font-medium leading-normal">Profile Completion</p>
-          <p className="text-[#111517] text-sm font-normal leading-normal">{""+getAccountCompletionPercentage(userdetails)}%</p>
+          <p className="text-[#111517] text-sm font-normal leading-normal ">{""+getAccountCompletionPercentage(userdetails)}%</p>
         </div>
-        <div className="rounded bg-[#dce1e5]"><div className={`h-2 rounded bg-[#111517] w-[${getAccountCompletionPercentage(userdetails)}%]`} ></div></div>
+
+        <div className="rounded bg-[#dce1e5] w-full">
+          <div className={`h-2 rounded bg-lightblue w-[${getAccountCompletionPercentage(userdetails)}%]`} >
+          </div>
+        </div>
+
         <p className="text-[#647987] text-sm font-normal leading-normal">Complete to unlock personalized content</p>
       </div>
       <div className="h-5 bg-white"></div>

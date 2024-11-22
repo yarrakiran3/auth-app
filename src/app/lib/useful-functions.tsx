@@ -8,6 +8,6 @@ for (let key in userdetails){
     }
 }
 console.log(percentage)
-return percentage
+return percentage;
     
 }
