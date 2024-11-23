@@ -43,7 +43,7 @@ export default async function ProfilePage() {
 function UserProfile({userdetails}:{userdetails:FetchingUserDetailsObject}){
 
   return(
-    <div className='md:p-12 p-2 dark:text-white'>
+    <div className='md:p-12 p-2 dark:text-white '>
     
     <ProfileUI userdetails={userdetails}/>
     </div>
