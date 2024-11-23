@@ -55,8 +55,8 @@ function ProfileUI({userdetails}:{userdetails:FetchingUserDetailsObject}){
 
   return (
     <>
-    <div className="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" >
-      <div className="flex items-center bg-white p-4 pb-2 justify-between">
+    <div className="relative flex size-full min-h-screen flex-col  group/design-root overflow-x-hidden" >
+      <div className="flex items-center  p-4 pb-2 justify-between">
         <Link href={"../"}>
         <div className="text-[#111517] flex size-12 shrink-0 items-center" data-icon="ArrowLeft" data-size="24px" data-weight="regular">
           <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
