@@ -55,7 +55,7 @@ function ProfileUI({userdetails}:{userdetails:FetchingUserDetailsObject}){
 
   return (
     <>
-    <div className="relative flex size-full min-h-screen flex-col  group/design-root overflow-x-hidden" >
+    <div className="relative flex size-full min-h-screen flex-col  group/design-root overflow-x-hidden bg-slate-200" >
       <div className="flex items-center  p-4 pb-2 justify-between">
         <Link href={"../"}>
         <div className="text-[#111517] flex size-12 shrink-0 items-center" data-icon="ArrowLeft" data-size="24px" data-weight="regular">
@@ -95,7 +95,7 @@ function ProfileUI({userdetails}:{userdetails:FetchingUserDetailsObject}){
           </div>
         </div>
       </div>
-      <div className="flex gap-4 bg-white px-4 py-3">
+      <div className="flex gap-4  px-4 py-3">
         <div className="text-[#111517] flex items-center justify-center rounded-lg bg-[#f0f3f4] shrink-0 size-12" data-icon="EnvelopeOpen" data-size="24px" data-weight="regular">
           <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
             <path
@@ -109,7 +109,7 @@ function ProfileUI({userdetails}:{userdetails:FetchingUserDetailsObject}){
           <p className="text-[#647987] text-sm font-normal leading-normal">Email</p>
         </div>
       </div>
-      <div className="flex gap-4 bg-white px-4 py-3">
+      <div className="flex gap-4  px-4 py-3">
         <div className="text-[#111517] flex items-center justify-center rounded-lg bg-[#f0f3f4] shrink-0 size-12" data-icon="DeviceTablet" data-size="24px" data-weight="regular">
           <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
             <path
@@ -123,7 +123,7 @@ function ProfileUI({userdetails}:{userdetails:FetchingUserDetailsObject}){
           <p className="text-[#647987] text-sm font-normal leading-normal">Phone</p>
         </div>
       </div>
-      <div className="flex gap-4 bg-white px-4 py-3">
+      <div className="flex gap-4  px-4 py-3">
         <div className="text-[#111517] flex items-center justify-center rounded-lg bg-[#f0f3f4] shrink-0 size-12" data-icon="BookOpen" data-size="24px" data-weight="regular">
           <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
             <path
@@ -136,7 +136,7 @@ function ProfileUI({userdetails}:{userdetails:FetchingUserDetailsObject}){
           <p className="text-[#647987] text-sm font-normal leading-normal">Stream</p>
         </div>
       </div>
-      <div className="flex gap-4 bg-white px-4 py-3">
+      <div className="flex gap-4  px-4 py-3">
         <div className="text-[#111517] flex items-center justify-center rounded-lg bg-[#f0f3f4] shrink-0 size-12" data-icon="BookOpen" data-size="24px" data-weight="regular">
           <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
             <path
@@ -149,7 +149,7 @@ function ProfileUI({userdetails}:{userdetails:FetchingUserDetailsObject}){
           <p className="text-[#647987] text-sm font-normal leading-normal">Branch</p>
         </div>
       </div>
-      <div className="flex gap-4 bg-white px-4 py-3">
+      <div className="flex gap-4  px-4 py-3">
         <div className="text-[#111517] flex items-center justify-center rounded-lg bg-[#f0f3f4] shrink-0 size-12" data-icon="MagnifyingGlass" data-size="24px" data-weight="regular">
           <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
             <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
