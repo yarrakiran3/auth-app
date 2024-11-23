@@ -52,10 +52,10 @@ function UserProfile({userdetails}:{userdetails:FetchingUserDetailsObject}){
 
 
 function ProfileUI({userdetails}:{userdetails:FetchingUserDetailsObject}){
-
+  const percentage=getAccountCompletionPercentage(userdetails)
   return (
     <>
-    <div className="relative flex size-full min-h-screen flex-col  group/design-root overflow-x-hidden bg-slate-200" >
+    <div className="relative flex size-full min-h-screen flex-col  group/design-root overflow-x-hidden bg-slate-200 rounded-xl" >
       <div className="flex items-center  p-4 pb-2 justify-between">
         <Link href={"../"}>
         <div className="text-[#111517] flex size-12 shrink-0 items-center" data-icon="ArrowLeft" data-size="24px" data-weight="regular">
@@ -172,17 +172,17 @@ function ProfileUI({userdetails}:{userdetails:FetchingUserDetailsObject}){
       <div className="flex flex-col gap-3 p-4 ">
         <div className="flex gap-6 justify-between">
           <p className="text-[#111517] text-base font-medium leading-normal">Profile Completion</p>
-          <p className="text-[#111517] text-sm font-normal leading-normal ">{""+getAccountCompletionPercentage(userdetails)}%</p>
+          <p className="text-[#111517] text-sm font-normal leading-normal ">{""+percentage}%</p>
         </div>
 
         <div className="rounded bg-[#dce1e5] w-full">
-          <div className={`h-2 rounded bg-lightblue w-[${getAccountCompletionPercentage(userdetails)}%]`} >
+          <div className={`h-2 rounded bg-lightblue w-[${percentage}%]`} >
           </div>
         </div>
 
         <p className="text-[#647987] text-sm font-normal leading-normal">Complete to unlock personalized content</p>
       </div>
-      <div className="h-5 bg-white"></div>
+      
     </div>
     </>
     )
