@@ -180,7 +180,7 @@ export async function onDetailsSubmit(detailsObject:BasicDetailsDataObject) {
 export async function getUserFromCredentialsUsers(mail:string) {
     try{
         const usercheck = await sql`
-                select user_id from credentials_users where mail = ${mail} 
+                select user_id from auth_app_credentials_users where mail = ${mail} 
             `;
             return usercheck.rowCount;
     } catch(error){
@@ -192,7 +192,7 @@ export async function getUserFromCredentialsUsers(mail:string) {
 export async function checkUserFromCredentialsUser(mail:string,password:string) {
     try{
         const usercheck = await sql`
-                select user_id from credentials_users 
+                select user_id from auth_app_credentials_users 
                 where mail = ${mail} and password = ${password}`;
             return usercheck.rowCount;
             
@@ -207,7 +207,7 @@ export async function saveUserToCredentialsUsers(name:string,mail:string,passwor
         
 
         const saveuser = await sql`
-                insert into credentials_users (name,mail,password)
+                insert into auth_app_credentials_users (name,mail,password)
                 values (${name},${mail},${password})
             `;
 
@@ -222,7 +222,7 @@ export async function saveUserToCredentialsUsers(name:string,mail:string,passwor
 export async function getUserFromOAuthUsers(mail:string,provider:string) {
     try{
           const usercheck=await sql`
-          select user_id from oauth_users where mail=${mail} and provider=${provider};
+          select user_id from auth_app_oauth_users where mail=${mail} and provider=${provider};
           `
           console.log("Sucesfully cheked the db");
 
@@ -239,7 +239,7 @@ export async function saveUserToOAuthUsers(mail:string,name:string,provider:stri
     try{
         
         const saveuser = await sql`
-        insert into oauth_users (mail,name,provider)
+        insert into auth_app_oauth_users (mail,name,provider)
         values (${mail},${name},${provider});
         `;
 
@@ -257,7 +257,7 @@ export async function fetchUserDetails(email:string,provider:string){
 
         try{
             const user = await sql`
-                select mail,name,number,stream,branch,domain,college,level_of_study from credentials_users where mail = ${email} 
+                select mail,name,number,stream,branch,domain,college,level_of_study from auth_app_credentials_users where mail = ${email} 
             `;
             return user.rows[0];
         }catch(error){
@@ -267,7 +267,7 @@ export async function fetchUserDetails(email:string,provider:string){
     } else {
         try{
             const user = await sql`
-                select mail,name,number,stream,branch,domain,college,level_of_study from oauth_users where mail = ${email} 
+                select mail,name,number,stream,branch,domain,college,level_of_study from auth_app_oauth_users where mail = ${email} 
             `;
             return user.rows[0];
         }catch(error){
