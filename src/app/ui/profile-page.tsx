@@ -8,12 +8,14 @@ import Link from 'next/link';
 
 export default async function ProfilePage() {
   let session:any;
-  let userdetails:any
+  let userdetails:any;
+  let percentage:any;
     try{
       session = await auth();
           if(session){
           userdetails= await fetchUserDetails(session.user.email,session.user.id);
           console.log(userdetails);
+          percentage=getAccountCompletionPercentage(userdetails);
           }
     
       } catch(error){

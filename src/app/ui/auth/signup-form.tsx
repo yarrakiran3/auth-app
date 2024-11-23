@@ -85,7 +85,7 @@ export default function SignUpForm() {
     <div className=''>
     <div className=' flex flex-row justify-around '>
     <div className='flex flex-row justify-around'>
-    <div className='bg-gray-200 rounded-xl shadow-xl p-12'>
+    <div className='bg-gray-200 dark:text-black rounded-xl shadow-xl p-12'>
 
       <div className='flex flex-col gap-2 p-1 '>
         <div >

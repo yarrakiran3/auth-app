@@ -106,7 +106,7 @@ export default function AcademicDetailsForm() {
 
   return (
     <div>
-    <div className='flex flex-row justify-around'>
+    <div className='flex flex-row justify-around dark:text-black'>
     <div>
 
       <div className='flex flex-col  p-4'>

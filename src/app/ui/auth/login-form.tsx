@@ -65,7 +65,7 @@ export default function LoginForm() {
   return (
     <div className=' flex flex-row justify-around '>
     <div className='flex flex-row justify-around'>
-    <div className='bg-gray-200 rounded-xl shadow-xl p-6'>
+    <div className='bg-gray-200 dark:text-black rounded-xl shadow-xl p-6'>
 
       <div className='flex flex-col gap-2 p-2 md:p-4'>
         <div >
