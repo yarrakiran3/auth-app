@@ -15,8 +15,10 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "GradS App",
-  description: "Official application of GradS",
+  title: "Secure Next.js Authentication App",
+  description: "A modern authentication app built with Next.js, NextAuth.js, and PostgreSQL. Supports OAuth providers like Google, GitHub, and LinkedIn for seamless and secure login.",
+  authors:{name:"Yarra Kiran Kumar"},
+  keywords:["Next.js authentication","NextAuth.js","secure login app", "secure authentication system"]
 };
 
 export default function RootLayout({
