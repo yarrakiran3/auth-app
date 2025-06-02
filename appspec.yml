@@ -1,0 +1,27 @@
+version: 0.0
+os: linux
+files:
+  - source: / # This refers to the root of your CodeBuild artifact
+    destination: /home/ec2-user/auth-app-deployment # The directory on your EC2 instance where the app will be deployed
+permissions:
+  - object: /home/ec2-user/auth-app-deployment
+    pattern: "**"
+    owner: ec2-user
+    group: ec2-user
+hooks:
+  BeforeInstall:
+    - location: scripts/before_install.sh
+      timeout: 300
+      runas: ec2-user
+  AfterInstall:
+    - location: scripts/after_install.sh
+      timeout: 300
+      runas: ec2-user
+  ApplicationStart:
+    - location: scripts/application_start.sh
+      timeout: 300
+      runas: ec2-user
+  ApplicationStop:
+    - location: scripts/application_stop.sh
+      timeout: 300
+      runas: ec2-user
