@@ -1,0 +1,16 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20 # Or your desired Node.js version
+    commands:
+      - echo "Installing dependencies..."
+      - npm install
+  build:
+    commands:
+      - echo "Building the Next.js application..."
+      - npm run build
+artifacts:
+  files:
+    - '**/*' # Include all files for deployment
+  base-directory: . # The root of your build output
