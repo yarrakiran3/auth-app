@@ -176,7 +176,7 @@ function ProfileUI({userdetails}:{userdetails:FetchingUserDetailsObject}){
         </div>
 
         <div className="rounded bg-[#dce1e5] w-full">
-          <div className={`h-2 rounded bg-lightblue `} style={{width=`${percentage}%`}} >
+          <div className={`h-2 rounded bg-lightblue `} style={{width=percentage+"%"}} >
           </div>
         </div>
 
